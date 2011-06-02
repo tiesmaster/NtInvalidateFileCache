@@ -11,8 +11,8 @@ int main(void) {
 
 	int system_info = ClearStandbyPageList;
 
-	NTSTATUS status = NtSetSystemInformation(SystemMemoryListInformation, &system_info, sizeof(system_info));
+	NTSTATUS ret = NtSetSystemInformation(SystemMemoryListInformation, &system_info, sizeof(system_info));
 
-	printf("NtSetSystemInformation() result: %#x\n", status);
+	printf("NtSetSystemInformation() result: %#x (%u)\n", ret, ret);
 	return 0;
 }
