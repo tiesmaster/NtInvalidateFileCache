@@ -1,0 +1,13 @@
+NtInvalidateFileCache
+
+This is a small tool that lets you invalidate the file cache on NT. Might be
+usefull when doing performance testing. This tool instructs NT to empty the
+standby list, which effectively invalidates all file buffers by the Cache
+Manager.
+
+Inspired by the menu option Empty > Empty Standby List of Mark Russinovich's
+RAMMap tool [1]. Code is heavily derived from ASSP's [2] FileSystemCache.cs [3].
+
+[1] http://technet.microsoft.com/en-us/sysinternals/ff700229
+[2] http://asstoredprocedures.codeplex.com/
+[3] https://asstoredprocedures.svn.codeplex.com/svn/ASSP
