@@ -3,3 +3,8 @@ NtInvalidateFileCache: native_api.h elevate_privileges.h elevate_privileges.c ma
 
 resource.o: resource.rc
 	windres resource.rc -o resource.o
+
+.PHONY: clean
+
+clean:
+	rm -f NtInvalidateFileCache.exe resource.o
